@@ -61,7 +61,7 @@ body #progress {
   font-size: 1.3rem;
   color: #ffa502;
 }
-#test{
+#boutonRecommencer{
     flex: 1 0 45%;
     width: 200px;
     height: 80px;
@@ -76,43 +76,40 @@ body #progress {
     font-size: 1.3rem;
     margin-top: 100px;
   }
-#test:hover {
-    background: #ffa502;
-    transition: 0.5s;
+#boutonRecommencer:hover {
+  background: #ffa502;
+  transition: 0.5s;
   }
-#test:active {
-    transform: scale(0.9);
-    transition: transform 0.1s;
+#boutonRecommencer:active {
+  transform: scale(0.9);
+  transition: transform 0.1s;
   }
 #underline {
-    width: 300px; 
-    height: 2px; 
-    background-color: blue; 
-    margin: 10px auto;
-
-
+  width: 300px; 
+  height: 2px; 
+  background-color: blue; 
+  margin: 10px auto;
 }
 h4{
-    font-size: 2.5em;
-    margin: 10px;
-    margin-top: 30px;
- color: black;
- font-weight: bolder;
+  font-size: 2.5em;
+  margin: 10px;
+  margin-top: 30px;
+  color: black;
+  font-weight: bolder;
 }
 img{
   width: 200px;
 }
 dialog{
- 
   margin: auto;
   border-radius: 15px;
   color: blue;
  }
- dialog::backdrop{
+dialog::backdrop{
   background-color: rgba(93, 188, 251, 0.5);
- 
+
  }
- #fermer{
+#fermer{
   background-color:blue;
   color: #dfe4ea;
   font-size: 2em;
@@ -122,12 +119,12 @@ dialog{
   padding-right: 10px;
   border-radius: 12px;
  }
- #fermerToujours{
-border: none;
-outline: none;
-background-color: white;
-font-size: 1.25em;
-padding: 10px;
+#fermerToujours{
+  border: none;
+  outline: none;
+  background-color: white;
+  font-size: 1.25em;
+  padding: 10px;
  }
 #contenueDialogue{
   display:flex;
@@ -138,23 +135,23 @@ padding: 10px;
   justify-content: center;
 }
 #nomCours{
-color: black;
+  color: black;
 }
 #nom{
-padding-bottom: 10px;
-display: flex;
-flex-direction: column;
-align-items: flex-start;
-margin-left: 30px;
-color: black;
+  padding-bottom: 10px;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  margin-left: 30px;
+  color: black;
 }
 #inspiration{
-display: flex;
-flex-direction: column;
-align-items: flex-start;
-margin-left: 30px;
-margin-top: 10px;
-color: black;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  margin-left: 30px;
+  margin-top: 10px;
+  color: black;
 }
 #boutons{
   display: flex;

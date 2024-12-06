@@ -39,6 +39,7 @@ class Question {
     hasEnded() {
       return this.currentQuestionIndex >= this.questions.length;
     }
+  //Permet de recommencer le Quizz
     reset(){
         this.score = 0;
         this.currentQuestionIndex = 0;
@@ -51,11 +52,12 @@ class Question {
       let element = document.getElementById(id);
       element.innerHTML = text;
     },
+    //Ajoute bouton pour recommencer le Quizz 
     endQuiz: function() {
       endQuizHTML = `
         <h1>Quiz terminé !</h1>
         <h3> Votre score est de : ${quiz.score} / ${quiz.questions.length}</h3>
-        <button id="test" onclick="restartQuiz()">Recommencer</button>`;
+        <button id="boutonRecommencer" onclick="restartQuiz()">Recommencer</button>`;
       this.elementShown("quiz", endQuizHTML);
     },
     question: function() {
@@ -95,6 +97,9 @@ class Question {
   // Create Quiz
   let quiz = new Quiz(questions);
   quizApp();
+  //Utilise la fonction pour remettre le Quizz à 0
+  //Remplace le HTML de la fin du Quizz par celui du début
+  //Relance le Quizz
   function restartQuiz() {
     quiz.reset();
     document.getElementById("quiz").innerHTML = `
@@ -109,7 +114,7 @@ class Question {
     quizApp();
   }
 //Variables
-const dialog = document.getElementById("dialog");
+const dialogue = document.getElementById("dialogue");
 const closeButton = document.getElementById("fermer");
 const fermerToujours = document.getElementById("fermerToujours");
 let memoireFermer = localStorage.getItem("fermer");
@@ -121,13 +126,13 @@ closeButton.addEventListener("click", fermer);
 
 //ferme la boite de dialogue
 function fermer() {
-  dialog.close();
+  dialogue.close();
 }
 //Lorsque on clique sur le bouton ça commence la fonction fermerToujours
 fermerToujours.addEventListener("click", fermerToujoursFunc);
 //Ferme la boite de dialogue et met en local storage le montant de memoireFermer
 function fermerToujoursFunc() {
-  dialog.close();
+  dialogue.close();
   memoireFermer++; 
   localStorage.setItem("fermer", memoireFermer);
 }
@@ -141,9 +146,9 @@ else {
 }
   //si le montant est supérieur à 1 n'affiche plus la boite de dialogue
 if (memoireFermer < 1) {
-  dialog.showModal();
+  dialogue.showModal();
 }
 else {
-  dialog.close(); 
+  dialogue.close(); 
 }
   
